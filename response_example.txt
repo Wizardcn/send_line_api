@@ -1,0 +1,37 @@
+// send text message and line sticker
+
+{
+  "response_type": "object",
+  "line_payload": [
+    {"type": "text", "text": "สวัสดีครับ"}, 
+    {
+    "type": "sticker",
+    "packageId": "446",
+    "stickerId": "1988"
+    }
+  ]
+}
+
+// send text message only
+
+{
+  "response_type": "object",
+  "line_payload": [{"type": "text", "text": "สวัสดีครับ"}]
+}
+
+// send image message
+
+{
+  "response_type":"object",
+  "line_payload":[
+    {
+      "type":"text",
+      "text":"This is prayut3 image"
+    },
+    {
+      "type":"image",
+      "originalContentUrl":"https://static.bangkokpost.com/media/content/dcx/2019/08/03/3278931.jpg",
+      "previewImageUrl":"https://static.bangkokpost.com/media/content/dcx/2019/08/03/3278931.jpg"
+    }
+  ]
+}
