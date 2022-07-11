@@ -67,10 +67,13 @@ async def serve_home():
 </html>
 """
 
-@app.get("/images/", status_code=status.HTTP_200_OK)
+@app.get("/images/random", status_code=status.HTTP_200_OK)
 async def send_random_image():
     random_image: dict = random.choice(mock_db)
     return Sequential(
         Message.text_message(f"This is {random_image['image_name']} image"),
         Message.image_message(random_image['image_url'], random_image['image_url'])
     ).to_dict()
+
+
+
